@@ -15,14 +15,14 @@ public class ProprietarioController {
         var p1 = new Proprietario();
         p1.setId(1L);
         p1.setNome("maria");
-        p1.setTelefone("62 9985790088");
+        p1.setTelefone("62 9 8579-1040");
         p1.setEmail("maria@gmail.com");
 
         var p2 = new Proprietario();
         p2.setId(2L);
-        p2.setNome("maria");
-        p2.setTelefone("62 9985790088");
-        p2.setEmail("maria@gmail.com");
+        p2.setNome("João Silva");
+        p2.setTelefone("62 9 8179-0088");
+        p2.setEmail("joaos@gmail.com");
 
         return Arrays.asList(p1, p2);
     }
