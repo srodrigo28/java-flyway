@@ -2,22 +2,20 @@ package com.treina.treinamento.controllers;
 
 import java.util.List;
 import com.treina.treinamento.models.Proprietario;
-
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import com.treina.treinamento.repository.ProprietarioRepository;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 public class ProprietarioController {
 
-    @PersistenceContext
-    private EntityManager manager;
+    @Autowired
+    private ProprietarioRepository propRepository;
     
     @GetMapping("proprietario")
     public List<Proprietario> listar() {
-      return manager.createQuery("from Proprietario", 
-      Proprietario.class).getResultList();
+      return propRepository.findAll();
     }
 }

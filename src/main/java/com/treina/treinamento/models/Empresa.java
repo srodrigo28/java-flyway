@@ -12,15 +12,13 @@ import lombok.Setter;
 @Setter
 @Entity
 @EqualsAndHashCode
-// @Table( name = "tb_produto")
-public class Produto {
+public class Empresa {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue( strategy = GenerationType.IDENTITY )
-    private Long id;
+    private Long Id;
     private String nome;
-    private int quantidade;
-    private Float preco;
-
+    private String cnpj;
+    
 }
