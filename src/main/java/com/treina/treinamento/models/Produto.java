@@ -1,10 +1,10 @@
 package com.treina.treinamento.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,17 +13,15 @@ import lombok.Setter;
 @Setter
 @Entity
 @EqualsAndHashCode
-// @Table( name = "proprietario")
-public class Proprietario {
+@Table( name = "tb_produto")
+public class Produto {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long id;
     private String nome;
-    private String email;
-
-    @Column(name="fone")
-    private String telefone;
+    private int quantidade;
+    private Float preco;
 
 }

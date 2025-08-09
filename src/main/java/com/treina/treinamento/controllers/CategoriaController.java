@@ -19,7 +19,7 @@ public class CategoriaController {
         c1.setNome("carros");
 
         var c2 = new Categoria();
-        c1.setId(2L);
+        c2.setId(2L);
         c2.setNome("casa");
 
         return Arrays.asList(c1, c2);

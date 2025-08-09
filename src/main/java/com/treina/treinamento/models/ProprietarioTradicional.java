@@ -1,6 +1,6 @@
 package com.treina.treinamento.models;
 
-public class ProprietarioB {
+public class ProprietarioTradicional {
 
     private Long id;
     private String nome;
