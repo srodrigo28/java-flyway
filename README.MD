@@ -18,9 +18,20 @@ create table proprietario(
 
     primary key(id)
 );
+```
 
+> * exibi os campos da tabela
+```
+desc proprietario;
+```
+
+> * Adiciona uma registrição para não haver chaves duplicadas
+```
 alter table proprietario
 add constraint uk_proprietario unique(email, telefone);
+```
 
-desc proprietario;
+> * Alterando uma coluna
+```
+alter table proprietario rename column telefone to fone;
 ```
