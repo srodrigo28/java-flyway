@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,5 +24,9 @@ public class Produto {
     private String nome;
     private int quantidade;
     private Float preco;
+
+    @ManyToOne // Muitos produtos para UMA categoria
+    @JoinColumn(name = "categoria_id") // Define o nome da coluna da chave estrangeira na tabela de produtos
+    private Categoria categoria;
 
 }
