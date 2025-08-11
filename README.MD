@@ -8,6 +8,54 @@ spring.datasource.username=root
 spring.datasource.password=123456
 ```
 
+#### End points
+
+> * GET Retorna todos
+```
+http://localhost:8080/proprietario/
+```
+
+> * GET Retorna por id
+```
+http://localhost:8080/proprietario/2
+```
+
+> * GET Retorna por nome
+```
+http://localhost:8080/proprietario/buscar
+```
+
+> * DELETE Apagar
+```
+http://localhost:8080/proprietario/1
+```
+
+> * POST Inserir
+```
+http://localhost:8080/proprietario/inserir
+```
+
+``` JSON
+{
+    "nome": "Gabriela Nogueira",
+    "email": "gaby@gmail.com",
+    "telefone": "62982242091"
+}
+```
+
+> * PUT Atualizar
+```
+http://localhost:8080/proprietario/1
+```
+
+``` JSON
+{
+    "nome": "Gabriela Nogueira",
+    "email": "gaby@gmail.com",
+    "telefone": "62982242091"
+}
+```
+
 #### SQL CRIADO
 ```
 create table proprietario(
